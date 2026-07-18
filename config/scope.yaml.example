@@ -1,0 +1,23 @@
+# WiFiSentinel scope file
+#
+# Copy this file to config/scope.yaml and fill it in BEFORE running any
+# active command (scan/audit). WiFiSentinel refuses to run without it,
+# and refuses to touch any BSSID/ESSID not explicitly listed here.
+#
+# Only list networks you own, or networks covered by a signed
+# penetration-testing agreement / bug bounty scope that explicitly
+# authorizes wireless testing.
+
+client_name: "My Home Lab"                 # e.g. "Acme Corp" or "My Home Lab"
+authorized_by: "Shridhar Vinayak Kirtane"  # who granted authorization
+authorization_reference: "SELF-TEST-2026-001"  # contract / engagement ID, or "self" for a home lab
+
+allowed_bssids:
+  - "AA:BB:CC:DD:EE:FF"   # your own router's BSSID
+
+allowed_essids:
+  - "MyHomeNetwork"
+
+notes: >
+  Example: home-lab router used for personal skill development and
+  portfolio project testing only.
